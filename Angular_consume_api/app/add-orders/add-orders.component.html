@@ -1,0 +1,49 @@
+<form [formGroup]="myForm" (ngSubmit)="insert()">
+    <table>
+        <tr>
+            <td>Enter OrderId</td>
+            <td>:</td>
+            <td><input type="text" formControlName="order_id"/>
+            <br/>
+            <span *ngIf="myForm.controls.order_id.touched && myForm.controls.order_id.invalid" style="color:red">Please Enter OrderId</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter CustomerName</td>
+            <td>:</td>
+            <td><input type="text" formControlName="customer_name"/>
+            <br/>
+            <span *ngIf="myForm.controls.customer_name.touched && myForm.controls.customer_name.invalid" style="color:red">Please Enter CustomerName</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter ProductId</td>
+            <td>:</td>
+            <td><input type="text" formControlName="product_id"/>
+            <br/>
+            <span *ngIf="myForm.controls.product_id.touched && myForm.controls.product_id.invalid" style="color:red">Please Enter ProductId</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Quantity</td>
+            <td>:</td>
+            <td><input type="text" formControlName="quantity"/>
+            <br/>
+            <span *ngIf="myForm.controls.quantity.touched && myForm.controls.quantity.invalid" style="color:red">Please Enter Quantity</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter TotalPrice</td>
+            <td>:</td>
+            <td><input type="text" formControlName="total_price"/>
+            <br/>
+            <span *ngIf="myForm.controls.total_price.touched && myForm.controls.total_price.invalid" style="color:red">Please Enter TotalPrice</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" [value]="btnName"/>
+            </td>
+        </tr>
+    </table>
+</form>

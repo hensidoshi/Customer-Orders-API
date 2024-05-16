@@ -1,0 +1,12 @@
+<div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">OrderId: {{data.order_id}}</h5>
+      <h5 class="card-title">CustomerName : {{data.customer_name}}</h5>
+      <h5 class="card-title">ProductId : {{data.product_id}}</h5>
+      <h5 class="card-title">Quantity : {{data.quantity}}</h5>
+      <h5 class="card-title">TotalPrice : {{data.total_price}}</h5>
+      <button routerLink="/orders" class="btn btn-primary m-2">Back</button>
+      <button routerLink="/orders/edit/{{data.order_id}}" class="btn btn-warning m-2">Edit</button>
+      <button (click)="delete()" class="btn btn-danger">Delete</button>
+    </div>
+  </div>

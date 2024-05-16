@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="card col-3" *ngFor="let order of data">
+    <div class="card-body">
+      <h5 class="card-title">OrderId: {{ order.order_id }}</h5>
+      <h5 class="card-text">CustomerName : {{ order.customer_name }}</h5>
+      <h5 class="card-text">ProductId : {{ order.product_id }}</h5>
+      <a routerLink="/orders/{{ order.order_id }}" class="btn btn-primary m-2">View More</a>
+      <a (click)="delete(order.order_id)" class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+</div>
